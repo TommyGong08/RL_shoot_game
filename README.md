@@ -6,13 +6,13 @@ RL_shoot_game 强化学习射击小游戏
 ## 游戏介绍   
 
 ### 游戏界面  
-[screen](./img/screen.png)  
+![screen](./img/screen.png)  
 绿色代表终点，紫色代表怪兽， 灰色代表围墙，红色代表玩家  
 
 ### 如何攻击  
 角色有效攻击范围如图中红色部分所示, 当怪兽位于攻击范围内时,玩家必须**静止2s**,才能完成怪物的击杀  
 
-[attack](./img/attack.png)
+![attack](./img/attack.png)
 
 ### 如何通关  
 必须消灭所有怪物后才能通关， 否则只是相当于移动到终点
