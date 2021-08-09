@@ -43,7 +43,7 @@ def update():
                 break
 
     # 结束游戏并关闭窗口
-    print('游戏结束')
+    print('game end!')
     pygame.quit()
 
 
@@ -56,5 +56,5 @@ if __name__ == "__main__":
     # 执行update函数
     update()
 
-    print('\nQ 表:')
+    print('\nQ Table:')
     print(RL.q_table)

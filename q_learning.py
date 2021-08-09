@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 """
-Q Learning 算法。做决策的部分，相当于机器人的大脑
+Q Learning Algorithm
 """
 
 import numpy as np
