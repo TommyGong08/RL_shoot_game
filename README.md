@@ -12,27 +12,28 @@ RL_shoot_game 强化学习射击小游戏
 ### 如何攻击  
 角色有效攻击范围如图中红色部分所示, 当怪兽位于攻击范围内时,玩家必须**静止2s**,才能完成怪物的击杀  
 
-![attack](./img/attack.png)
+![attack](./img/attack.png)  
 
-### 如何通关  
-必须消灭所有怪物后才能通关， 否则只是相当于移动到终点
+### 如何通关    
+必须消灭所有怪物后才能通关， 否则只是相当于移动到终点  
 
-### 效果展示
-1. q_learning  
-![show](./img/Q_learning.gif) 
+### 效果展示  
+1. q_learning      
+![show](./img/Q_learning.gif)   
+  
+2. DQN  
+![show2](./img/DQN.gif)   
 
-2. DQN
-![show2](./img/DQN.gif) 
 
+### 关于项目文件  
+1. 1-Q_learning   
+该文件下存放基于Q_learning算法的通关项目  
+* game.py 里面定义游戏界面  
+* q_learning.py Qlearning算法核心  
+* main.py 主函数， 负责游戏情节迭代  
 
-### 关于项目文件
-1. 1-Q_learning 
-该文件下存放基于Q_learning算法的通关项目
-* game.py 里面定义游戏界面
-* q_learning.py Qlearning算法核心
-* main.py 主函数， 负责游戏情节迭代
-
-2. 2-DQN
+  
+2. 2-DQN  
 该文件下存放基于DQN算法的通关项目
 * game.py 里面定义游戏界面
 * DQN.py DQN算法核心
