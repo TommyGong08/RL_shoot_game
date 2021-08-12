@@ -11,9 +11,9 @@ kill_wait_time = 2
 is_killed = False
 
 
-class Maze():
+class Env:
     def __init__(self):
-        super(Maze, self).__init__()
+        super(Env, self).__init__()
         self.action_space = ['u', 'd', 'l', 'r']
         self.n_actions = len(self.action_space)
         # self.title("Q-learning shoot game")
@@ -67,7 +67,7 @@ class Maze():
             return False
 
     def reset(self):
-        self.person = 97
+        self.person = start_position
         self.monster = [33, 37]
         print(self.person)
         return self.person, self.monster
@@ -137,20 +137,22 @@ class Maze():
             reward = 1
             done = True
             # 终止
-            s_ = 'terminal'
             print("通关，好棒!")
         elif s_ in monster:
             # 踩到炸弹1，奖励为 -1
             reward = -1
             done = True
-            # 终止
-            s_ = 'terminal'
-            print("Fight with monster!")
+            print("碰到怪兽")
         else:
             # 其他格子，没有奖励
             reward = 0
             # 非终止
             done = False
+        if is_collision:
+            # 碰撞返回-0.5奖励
+            reward = -0.5
+            done = False
+            print("碰壁")
         return s_, reward, done
 
 '''

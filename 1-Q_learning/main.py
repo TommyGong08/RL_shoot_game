@@ -4,7 +4,7 @@
 游戏的主程序，调用q_learning和env
 """
 
-from game import Maze
+from game import Env
 from q_learning import QLearning
 import pygame
 
@@ -13,7 +13,6 @@ def update():
     for episode in range(100):  # 100次游戏情节
         # 初始化 state（状态）
         state = env.reset()
-        print(state)
 
         step_count = 0  # 记录走过的步数
 
@@ -24,6 +23,7 @@ def update():
             clock.tick(10)  # 每秒执行100次
             # RL 大脑根据 state 挑选 action
             action = RL.choose_action(str(state))
+            print(action)
             # 探索者在环境中实施这个 action, 并得到环境返回的下一个 state, reward 和 done (是否是踩到炸弹或者找到宝藏)
             state_, reward, done = env.step(action)
             # print(state_)
@@ -50,7 +50,7 @@ def update():
 if __name__ == "__main__":
     # 创建环境 env 和 RL
     pygame.init()  # 初始化pygame
-    env = Maze()
+    env = Env()
     RL = QLearning(actions=list(range(env.n_actions)))
 
     # 执行update函数
