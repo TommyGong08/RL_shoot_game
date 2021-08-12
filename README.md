@@ -3,6 +3,23 @@ RL_shoot_game 强化学习射击小游戏
 
 使用强化学习训练射击类通关小游戏AI  
   
+### 关于项目文件  
+**1-Q_learning**     
+该文件下存放基于Q_learning算法的通关项目
+* game.py 里面定义游戏界面  
+* q_learning.py Qlearning算法核心  
+* main.py 主函数， 负责游戏情节迭代  
+
+  
+**2-DQN**       
+该文件下存放基于DQN算法的通关项目
+* game.py 里面定义游戏界面
+* DQN.py DQN算法核心
+* main.py 主函数， 负责游戏情节迭代
+* Net.py 神经网络(pytorch)
+* model 存放训练模型，笔者已训练100个episode
+    
+
 ## 游戏介绍   
 
 ### 游戏界面  
@@ -23,25 +40,6 @@ RL_shoot_game 强化学习射击小游戏
   
 2. DQN    
 ![show2](./img/DQN.gif)   
-
-
-### 关于项目文件  
-**1-Q_learning**     
-该文件下存放基于Q_learning算法的通关项目
-* game.py 里面定义游戏界面  
-* q_learning.py Qlearning算法核心  
-* main.py 主函数， 负责游戏情节迭代  
-
-  
-**2-DQN**       
-该文件下存放基于DQN算法的通关项目
-* game.py 里面定义游戏界面
-* DQN.py DQN算法核心
-* main.py 主函数， 负责游戏情节迭代
-* Net.py 神经网络(pytorch)
-* model 存放训练模型，笔者已训练100个episode
-
-游戏结束会自动生成Q表  
 
 ### 开始游戏  
 ```
